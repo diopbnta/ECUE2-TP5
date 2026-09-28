@@ -20,9 +20,14 @@ Nom / Prénom :
 
 ## Partie 2
 
-**2.1** :
+**2.1** :Non, il ne faut pas écrire de setters.
 
-**2.2** :
+Les attributs sont private et final, et les règles métier indiquent qu'un auteur ne peut pas modifier son nom, son prénom ou sa date de naissance après sa création.
+Donc , il faut utiliser les getters ret pas les setters
+
+**2.2** :Parce que le constructeur est l'endroit où l'objet est créé.
+
+On veut garantir qu'il est valide dès sa création.
 ## Partie 3
 
 **3.1** :
