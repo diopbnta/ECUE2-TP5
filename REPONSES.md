@@ -30,9 +30,9 @@ Donc , il faut utiliser les getters ret pas les setters
 On veut garantir qu'il est valide dès sa création.
 ## Partie 3
 
-**3.1** :
+**3.1** : ça limite le nombre de disponibilité pour pas avoir de livre disponible que d'exemplaire
 
-**3.2** :
+**3.2** :  Pour éviter de répéter la même vérification, on crée une méthode privée verifierTitre(). Le constructeur et setTitre() appellent cette méthode. Cela évite la duplication du code et garantit que la même règle est appliquée partout.
 
 ## Partie 4
 
