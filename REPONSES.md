@@ -4,25 +4,25 @@ Nom / Prénom :
 
 ## Partie 1 : Enquête
 
-| Étape | Ce qui est anormal | Ligne responsable | Classe qui aurait dû l'empêcher |
-|-------|--------------------|-------------------|---------------------------------|
-| 1     |                    |                   |                                 |
-| 2     |                    |                   |                                 |
-| 3     |                    |                   |                                 |
-| 4     |                    |                   |                                 |
-| 5     |                    |                   |                                 |
-| 6     |                    |                   |                                 |
+| Étape | Ce qui est anormal                                          | Ligne responsable                                                        | Classe qui aurait dû l'empêcher |
+|-------|-------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------|
+| 1     | Tous les auteurs affiches verne                             | Static dans Auteur                                                       | Auteur                          |
+| 2     | Germinal a un nombre de disponibles  de -2 aprés 3 emprunts | germinal.nbDisponibles--;                                                | Livre                           |
+| 3     | Date de naissance 2090                                      | Auteur inconnu = new Auteur("Dupont", "Jean", LocalDate.of(2090, 1, 1)); | Auteur                          |
+| 4     | L'ISBN devient "123" et le titre devient null               | tourDuMonde.isbn = "123"; et tourDuMonde.titre = null;                   | Livre                           |
+| 5     | Modifier et ensuite ajouter des livres                      | bib.nbLivres = 1; puis bib.ajouterLivre(...)                             | Bibliotéque                     |
+| 6     | Nombre de livre égal 100 et ensuite il essaye d'en rajouter | bib.nbLivres = 100; puis bib.ajouterLivre(...)                           | Bibliotéque                                |
 
-**1.1** :
+**1.1** :Parceque avec la méthode static dans la classe Auteur, à chaque fois qu'on crée un nouveau ça le remplace avec la précédente
 
-**1.2** :
+**1.2** : Une bonne classe doit protéger ses données et garantir ses règles. Le code extérieur ne devrait pas pouvoir faire n'importe quoi directement.
+        germinal.nbDisponibles--; 1 - 0 - -1 - -2
 
 ## Partie 2
 
 **2.1** :
 
 **2.2** :
-
 ## Partie 3
 
 **3.1** :
