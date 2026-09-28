@@ -36,9 +36,15 @@ On veut garantir qu'il est valide dès sa création.
 
 ## Partie 4
 
-**4.1** :
+**4.1** :  Les deux manipulations suivantes n'ont plus d'équivalent :
 
-**4.2** :
+Modifier directement le nombre de disponibles - germinal.nbDisponibles--; On doit utiliser : bib.emprunter(isbn);
+
+Modifier directement le nombre de livres  : bib.nbLivres = 1;
+
+**4.2** : Il ne faut pas retourner directement le tableau interne, car le code extérieur pourrait modifier son contenu et contourner les règles de la classe. 
+Par exemple, bib.getLivres()[0] = null permettrait de supprimer un livre, et bib.getLivres()[0] = autreLivre permettrait de remplacer un livre sans contrôle. 
+Cela montre qu'une bonne encapsulation consiste non seulement à mettre les attributs en private, mais aussi à ne pas donner directement accès aux structures internes.
 
 ## Partie 5
 
